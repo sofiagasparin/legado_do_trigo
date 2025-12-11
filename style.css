@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco: #fff;
+    --preto: #000;
+    --marrom: #72543D;
+    --verde: #6B8E23;
+}
+
+.espaco_lateral {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #FFEFDD;
+}
+
+/* -------- Menu ------- */
+header {
+    height: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 155px;
+}
+
+.menu {
+    max-width: 700px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-size: 25px;
+    color: var(--marrom);
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-family: "Inter", sans-serif;
+}
+
+.menu a:hover {
+    color: var(--verde);
+}
+
+/* -------- Menu Hamburguer ------- */
+#icone-barras,
+#icone-x,
+#menu_botao {
+    display: none;
+}
+
+/* ---------- Reponsividade ---------------- */
+@media screen and (max-width: 768px) {
+    #sombra {
+        background-color: var(--marrom);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+    #menu_botao {
+        display: block;
+        z-index: 1;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    header svg {
+        fill: var(--marrom);
+    }
+
+    #icone-barras {
+        display: block;
+    }
+
+    nav.menu {
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .menu a {
+        color: var(--branco);
+    }
+}
+
+.banner {
+    width: 100%;
+}
+
+#textoEscola p {
+    align-items: center;
+    margin-top: 50px;
+    width: 350px;
+    font-size: 25px;
+    text-align: justify;
+    gap: 50px;
+}
+
+#escola {
+    display: flex;
+}
+
+#escola img {
+    max-width: 480px;
+    width: 50%;
+    margin-top: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
+}
+
+.texto-todo {
+    margin-left: 200px;
+    font-size: 35px;
+    text-align: justify;
+    margin-top: 130px;
+    gap: 10px;
+}
+
+.titulo h2 {
+    margin-right: 5px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: var(--marrom);
+    gap: 80px;
+    margin-bottom: 20px;
+}
+
+#sobre-nos {
+    align-items: center;
+    margin-top: 50px;
+    font-size: 25px;
+    gap: 50px;
+}
+
+.titulo-sobre h2 {
+    margin-right: 5px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: var(--marrom);
+    gap: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.roda_pe {
+    background: var(--marrom);
+    padding: 150px;
+    margin-top: 40px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+.redes-sociais svg {
+    width: 50px;
+    height: auto;
+    color: var(--preto);
+}
+
+.redes-sociais p{
+    margin-left: 50px;
+    margin-right: 20px;
+    font-size: 25px;
+    flex-direction: column; 
+    align-items: flex-end;  
+    gap: 10px;  
+}
+
+.icones {
+    display: flex;
+    gap: 10px;
+}
+
+#vendidos img {
+    width: 100%;
+    transform: translate(-200px);
+    border-radius: 10px;
+    margin-top: -80px;
+}
+
+#vendidos {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 355px;
+    gap: 50px;
+}
+
+#mais-vendidos {
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#mais-vendidos h2 {
+    margin-left: 20px;
+    margin-top: 50px;
+    color: var(--marrom);
+    gap: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+     width: 90%;
+    border-radius: 10px;
+    margin-left: 355px;
+  transform: translate(-300px);
+  gap: 20px;
+}
+
+
+.cards img {
+    width: 400px;     
+    height: auto;
+    border-radius: 15px; 
+    transition: transform .3s ease;
+}
+
+
+.cards img:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+#carrossel h2{
+     margin-left: 20px;
+    margin-top: 20px;
+    color: var(--marrom);
+    gap: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+}
